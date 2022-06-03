@@ -5,6 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos Justify-content</title>
+    <style>
+        .container{
+            max-width: 400px;
+            border: solid 1px black;
+            margin: 0;
+            display: flex;
+            background-color: aqua;
+        }
+
+        .item{
+            background-color: rgb(0, 20, 0);
+            margin: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        .flex-start{ justify-content: flex-start;}
+        .flex-end{justify-content: flex-end;}
+        .center{justify-content: center;}
+        .space-between{justify-content: space-between;}
+        .space-around{justify-content: space-around;}
+        .space-evenly{justify-content: space-evenly;}
+
+
+        .column{
+            flex-direction: column;
+            min-height: 200px;
+        }
+
+
+    </style>
 </head>
 <body>
     <h1>Justify-content</h1>
@@ -19,5 +50,100 @@
         <li>Space-around: Os espaçamentos do meio são duas vezes maiores que o inicial e final.</li>
     </ul>
     
+
+    <h1>Flex direction ROW</h1>
+    <h2>Flex - start (Comportamento Default)</h2>
+    <section class="container flex-start">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h2>Flex-end</h2>
+    <section class="container flex-end">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h2>Center</h2>
+    <section class="container center">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h2>space-between</h2>
+    <section class="container space-between">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </section>
+
+    <h2>space-around</h2>
+    <section class="container space-around">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </section>
+
+    <h2>space-evenly</h2>
+    <section class="container space-evenly">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </section>
+
+    <h1>Flex direction column</h1>
+    
+
+    <h2>Flex - start (Comportamento Default)</h2>
+    <section class="container flex-start column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h2>Flex-end</h2>
+    <section class="container flex-end column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h2>Center</h2>
+    <section class="container center column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h2>space-between</h2>
+    <section class="container space-between column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </section>
+
+    <h2>space-around</h2>
+    <section class="container space-around column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </section>
+
+    <h2>space-evenly</h2>
+    <section class="container space-evenly column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </section>
+
 </body>
 </html>
