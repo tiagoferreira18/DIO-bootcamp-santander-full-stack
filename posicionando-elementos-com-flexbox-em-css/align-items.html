@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Align Items</title>
+    <style>
+        .container{
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+        }
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+
+        .center{align-items: center;}
+        .stretch{align-items: stretch;}
+        .start{align-items: flex-start;}
+        .end{align-items: flex-end;}
+        .baseline{align-items: baseline;}
+        .column{flex-direction: column;}
+        .central{ height: 300px; justify-content: center;}
+        .central .item{flex: 0; padding: 20px;}
+
+    </style>
+</head>
+<body>
+
+    <h1>Align Items</h1>
+    <p>Trata do alinhamento dos flex itens de acordo com o eixo do container.</p>
+    <p>O alinhamento é diferente para quando os itens estão em colunas ou linhas.</p>
+    <p>Permite o alinhamento central no eixo vertical.</p>
+
+    <h2>Tipos de alinhamento</h2>
+    <ul>
+        <li><strong>Center:</strong> Alinhamento dos itens ao centro</li>
+        <li><strong>Stretch:</strong> padrão, e os flex itens cresçam igualmente</li>
+        <li><strong>Flex-start:</strong> alinhamento dos itens no início</li>
+        <li><strong>Flex-end:</strong>alinhamento dos itens no final</li>
+        <li><strong>Baseline:</strong>alinhamento de acordo com a linha base da tipografia dos itens.</li>
+    </ul>
+
+    <h2>ROW</h2>
+    <h3>Center</h3>
+    <section class="container center">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet </div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h3>Stretch</h3>
+    <section class="container stretch">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam incidunt illo, at hic veritatis commodi fugiat facilis necessitatibus itaque fugit dolores! Nemo alias officia eum aperiam totam a provident? </div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h3>Flex-start</h3>
+    <section class="container start">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam incidunt illo, at hic veritatis commodi fugiat facilis necessitatibus itaque fugit dolores! Nemo alias officia eum aperiam totam a provident? </div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h3>Flex-end</h3>
+    <section class="container end">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam incidunt illo, at hic veritatis commodi fugiat facilis necessitatibus itaque fugit dolores! Nemo alias officia eum aperiam totam a provident? </div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h3>Baseline</h3>
+    <section class="container baseline">
+        <div class="item"><br> Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam incidunt illo, at hic veritatis commodi fugiat facilis necessitatibus itaque fugit dolores! Nemo alias officia eum aperiam totam a provident? </div>
+        <div class="item">Item 3</div>
+    </section>
+
+
+    <h2>COLUMN</h2>
+    <h3>Center</h3>
+    <section class="container center column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet </div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h3>Stretch</h3>
+    <section class="container stretch column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam incidunt illo, at hic veritatis commodi fugiat facilis necessitatibus itaque fugit dolores! Nemo alias officia eum aperiam totam a provident? </div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h3>Flex-start</h3>
+    <section class="container start column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam incidunt illo, at hic veritatis commodi fugiat facilis necessitatibus itaque fugit dolores! Nemo alias officia eum aperiam totam a provident? </div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h3>Flex-end</h3>
+    <section class="container end column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam incidunt illo, at hic veritatis commodi fugiat facilis necessitatibus itaque fugit dolores! Nemo alias officia eum aperiam totam a provident? </div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h3>Baseline</h3>
+    <section class="container baseline column">
+        <div class="item"><br> Item 1</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsam incidunt illo, at hic veritatis commodi fugiat facilis necessitatibus itaque fugit dolores! Nemo alias officia eum aperiam totam a provident? </div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <h3>Alinhando o conteudo ao meio do container</h3>
+    <section class="container central center">
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, labore. Explicabo hic, eum illum eos </div>
+    </section>
+
+
+</body>
+</html>
