@@ -5,9 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Align-self</title>
+    <style>
+        .container{
+            display: flex;
+            max-width: 350px;
+            border: solid 1px rgb(196, 84, 84);
+            margin-bottom: 10px;
+            /* align-items: center; */
+        }
+        .align-container{align-items: center;}
+        .item{
+            background-color: aqua;
+            color: red;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+        .center{align-self: center;}
+        .start{align-self: flex-start;}
+        .end{align-self: flex-end;}
+        .baseline{align-self: baseline;}
+        .stretch{align-self: stretch;}
+        .auto{align-self: auto;}
+</style>
 </head>
 <body>
     <h1>Align- self</h1>
     <p>É a propriedade que estabelece o alinhamento de modo individual sobre um determinado item</p>
+
+    <h2>VAlores possíveis</h2>
+    <ul>
+        <li>auto: valor padrão, irá respeitar a definição de align-items do container</li>
+        <li>flex-start: ao início do container.</li>
+        <li>flex-end: ao final do container</li>
+        <li>center: relativo ao centro de acordo com o eixo</li>
+        <li>stretch: ocupa todo os espaço relativo.</li>
+        <li>baseline: utiliza a linha base da tipografia.</li>
+    </ul>
+
+    <h2>Auto</h2>
+    <div class="container align-container">
+        <div class="item auto">AAA</div>
+        <div class="item">123</div>
+        <div class="item auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, facilis!</div>
+        <div class="item auto">Item 4</div>
+    </div>
+
+    <h2>Misto</h2>
+    <div class="container ">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, facilis!</div>
+        <div class="item end">Item 4</div>
+    </div>
 </body>
 </html>
