@@ -11,6 +11,7 @@ let currentNumber = 0;
 function increment(){
     currentNumber = currentNumber + 1;
     currentNumberWrapper.innerHTML = currentNumber;
+  
 }
 
 function incrementColor(){
@@ -42,25 +43,25 @@ function decrement(){
 
 
 /* Eventos de click */
-subtracao.addEventListener('click', ()=>{
-    increment()
-    incrementColor()
+
+    subtracao.addEventListener('click', ()=>{
+        increment()
+        incrementColor()
+                     
+    })
+
    
-})
+
+
 
 soma.addEventListener('click', ()=>{
     decrement()
     decrementColor()
    
          
-})
+}) 
 
 
 
-/* Contador maior que 10 */
-
-for( let i = 1, i<10; i++  ){
-
-}
 
 
