@@ -8,6 +8,6 @@ function somaNumeros(arr){
     })
 }
 
-const arr = [1, 2];
-
+const arr = [1, 2, 5];
 console.log(somaNumeros(arr));
+
