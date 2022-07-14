@@ -97,7 +97,7 @@ function redireciona(usuario: IUsuario | IAdmin){
 
 //----------uTILIZANDO ? PARA VARIAVEIS OPCIONAIS
 
-interface IUsuario{
+/* interface IUsuario{
     id: string;
     email: string;
     cargo?: 'padrao' | 'gerente' | 'coordenador' | 'supervisor';
@@ -109,3 +109,41 @@ function redireciona(usuario: IUsuario){
    }
    // redireciona para area do usuario
 }
+
+ */
+
+
+
+//-----Criando variáveis com propriedade readonly e private
+
+interface Cachorro{
+    nome: string;
+    idade: number;
+    parqueFavorito?: string;
+}
+
+/* const meuCachorro: Cachorro = {
+    nome: 'Apolo',
+    idade: 14,
+
+} */
+
+type CachorroSomenteLeitura = {
+    +readonly [k in keyof Cachorro]-?: Cachorro[k];
+}
+
+class MeuCachorro implements CachorroSomenteLeitura{
+    idade;
+    nome;
+    parqueFavorito;
+
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+const cao = new MeuCachorro('Apolo', 13);
+cao.idade = 8;
+
+console.log(cao);
