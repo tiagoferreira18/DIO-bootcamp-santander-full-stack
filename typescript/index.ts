@@ -115,20 +115,20 @@ function redireciona(usuario: IUsuario){
 
 
 //-----Criando variáveis com propriedade readonly e private
-
+/* 
 interface Cachorro{
     nome: string;
     idade: number;
     parqueFavorito?: string;
 }
-
+ */
 /* const meuCachorro: Cachorro = {
     nome: 'Apolo',
     idade: 14,
 
 } */
 
-type CachorroSomenteLeitura = {
+/* type CachorroSomenteLeitura = {
     +readonly [k in keyof Cachorro]-?: Cachorro[k];
 }
 
@@ -147,3 +147,22 @@ const cao = new MeuCachorro('Apolo', 13);
 cao.idade = 8;
 
 console.log(cao);
+ */
+
+
+
+
+//---como importar bibliotecas-----------------------
+
+interface Estudante{
+    nome: string;
+    idade: number;
+}
+
+interface Estudante{
+    serie: string;
+}
+
+const estudante: Estudante = {
+    
+}
