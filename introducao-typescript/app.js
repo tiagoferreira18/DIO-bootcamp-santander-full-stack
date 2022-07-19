@@ -1,14 +1,54 @@
 "use strict";
-const button = document.getElementById('button');
-const input1 = document.getElementById('input1');
-const input2 = document.getElementById('input2');
-function adicionandoNumero(numero1, numero2) {
-    return numero1 + numero2;
+const pessoa = {
+    nome: "Mariana",
+    idade: 20,
+    profissao: 'desenvolvedora'
+};
+// Se tentar trocar a idade passando como string '21' não permitira, valida o tipo também dentro dos objetos.
+pessoa.idade = 21;
+//Objeto com a tipagem iniciada, deve seguir o tipo na declaração dos valores
+const andre = {
+    nome: 'Andre',
+    idade: 25,
+    profissao: 'Desenvolvedor'
+};
+const paula = {
+    nome: 'Paula',
+    idade: 25,
+    profissao: 'Desenvolvedor'
+};
+//enum grupo de constantes
+var Profissao;
+(function (Profissao) {
+    Profissao[Profissao["Professora"] = 0] = "Professora";
+    Profissao[Profissao["Atriz"] = 1] = "Atriz";
+    Profissao[Profissao["Desenvolvedora"] = 2] = "Desenvolvedora";
+    Profissao[Profissao["JogadorDeFutebol"] = 3] = "JogadorDeFutebol";
+})(Profissao || (Profissao = {}));
+const vanessa = {
+    nome: "Vanessa",
+    idade: 23,
+    profissao: Profissao.Atriz
+};
+const maria = {
+    nome: "Maria",
+    idade: 23,
+    profissao: Profissao.Atriz
+};
+const jessica = {
+    nome: 'Jessica',
+    idade: 29,
+    profissao: Profissao.JogadorDeFutebol,
+    materias: ['Português', 'Matemática', 'Ed.Fisica']
+};
+const monica = {
+    nome: 'Monica',
+    idade: 29,
+    materias: ['Português', 'Matemática', 'Ed.Fisica']
+};
+function listar(lista) {
+    for (const item of lista) {
+        console.log('- ', item);
+    }
 }
-if (button) {
-    button.addEventListener('click', () => {
-        if (input1 && input2) {
-            console.log(adicionandoNumero(Number(input1.value), Number(input2.value)));
-        }
-    });
-}
+listar(monica.materias);
