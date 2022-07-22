@@ -1,3 +1,4 @@
+/* Tive que deixar a classe opcional ? pesquisar o porque */
 export class Course {
     id?: number;
     name?: string;
