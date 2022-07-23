@@ -1,2 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css' /* Esta sendo importado o bootstrap  */
+@import '~bootstrap/dist/css/bootstrap.min.css'; /* Esta sendo importado o bootstrap  */
+
+@import '~font-awesome/css/font-awesome.min.css'; /* Improtando a font para usar as estrelas */
