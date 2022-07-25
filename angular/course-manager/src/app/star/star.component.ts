@@ -15,6 +15,6 @@ export class StarComponent implements OnChanges {
     starWidth?: number;
 
     ngOnChanges(): void {
-        this.starWidth = this.rating = 1 * (400 / 5);
+        this.starWidth = this.rating =  94 / 5;
     }
 }
